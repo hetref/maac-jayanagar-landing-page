@@ -2677,6 +2677,7 @@ a:hover {
 
 	.desktop-only-content,
 	.hero-section {
+
 		display: none !important
 	}
 }
@@ -3013,15 +3014,46 @@ a:hover {
 }
 #cbtn 
 {
-	border: 1px solid black !important;
-	border-radius: 10px;
-	background-color: red;
 	
+		background-color: #bd2329;
+		font-family: var(--body-font-family);
+		cursor: pointer;
+		transition: .3s;
+		padding: 12px 28px;
+		border-radius: 0;
+		position: relative;
+		align-items: center;
+		gap: 11px;
+		overflow: hidden;
+		width: auto
+		var(--border-color)
+	
+
 }
 #cbtn:hover
 {
-	background-color: red;
-	color: yellow;
+	background-color: #f2b111;
+	color: white;
+}
+#cbtn span
+{
+	color: var(--black-color);
+	position: relative;
+	z-index: 111;
+	transition: .5s
+}
+#cbtn::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 100%;
+	visibility: hidden;
+	overflow: hidden;
+	background-color: var(--secondary-color);
+	transition: .3s;
+	z-index: 11
 }
 .course-title {
   font-size: 18px;
