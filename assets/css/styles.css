@@ -157,6 +157,14 @@ a:hover {
 		height: 20px
 	}
 
+	/* Set max-width for desktop containers */
+	.ak-main_header .container-fluid,
+	.ak-site_header .container {
+		max-width: 1320px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	.ak-height-25 {
 		height: 25px
 	}
@@ -1151,9 +1159,11 @@ a:hover {
 		bottom: 50px
 	}
 
-	.ak-site_header .container {
-		max-width: 100%
-	}
+	   .ak-site_header .container {
+		   max-width: 1320px;
+		   margin-left: auto;
+		   margin-right: auto;
+	   }
 
 	.ak-site_header.ak-style1 .ak-action_box>:not(:last-child) {
 		margin-right: 25px
@@ -2677,7 +2687,7 @@ a:hover {
 
 	.desktop-only-content,
 	.hero-section {
-		
+		max-width: 1320px;
 		display: none !important
 	}
 }
@@ -3389,5 +3399,3 @@ a:hover {
     padding: 3px 8px;
   }
 }
-
-
