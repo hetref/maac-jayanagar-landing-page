@@ -3012,36 +3012,43 @@ a:hover {
   color: var(--black-color);
   
 }
-#cbtn 
-{
-	
-		background-color: #bd2329;
-		font-family: var(--body-font-family);
-		cursor: pointer;
-		transition: .3s;
-		padding: 12px 28px;
-		border-radius: 0;
-		position: relative;
-		align-items: center;
-		gap: 11px;
-		overflow: hidden;
-		width: auto
-		var(--border-color)
-	
+#cbtn {
+	background-color: #bd2329;
+	font-family: var(--body-font-family);
+	cursor: pointer;
+	transition: 0.3s;
+	padding: 12px 28px;
+	border-radius: 0;
+	position: relative;
+	align-items: center;
+	gap: 11px;
+	overflow: hidden;
+	width: auto;
+	/* border is set inline or can be moved here */
+}
 
-}
-#cbtn:hover
-{
+#cbtn:hover {
 	background-color: #f2b111;
-	color: white;
+	color: black;
 }
-#cbtn span
-{
-	color: var(--black-color);
+
+#cbtn span {
+	color: white; /* ✅ Set initial color to white */
 	position: relative;
 	z-index: 111;
-	transition: .5s
+	transition: 0.5s;
 }
+
+/* On hover: change text color to black */
+#cbtn:hover span {
+	color: black;
+}
+
+/* On hover: change SVG path stroke to black */
+#cbtn:hover svg path {
+	stroke: black;
+}
+
 #cbtn::before {
 	content: "";
 	width: 100%;
@@ -3052,9 +3059,10 @@ a:hover {
 	visibility: hidden;
 	overflow: hidden;
 	background-color: var(--secondary-color);
-	transition: .3s;
-	z-index: 11
+	transition: 0.3s;
+	z-index: 11;
 }
+
 .course-title {
   font-size: 18px;
   font-weight: 700;
