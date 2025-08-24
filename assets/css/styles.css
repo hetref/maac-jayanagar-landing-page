@@ -3412,6 +3412,7 @@ a:hover {
     max-width: 1320px !important;
     margin-left: auto;
     margin-right: auto;
+	width: 100% !important;
   }
   
   .container-md {
