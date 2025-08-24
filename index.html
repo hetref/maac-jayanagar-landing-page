@@ -2175,8 +2175,6 @@
 
     <script>
       $(document).ready(function () {
-        const scriptURL =
-          "https://script.google.com/macros/s/AKfycbyfcThL9vVqMvH_7LD6ag0T0t3Bz-_vnoydSTyb-GNaXMuenb-GSwquN1em0ueivMSX/exec";
         const $form = $(".leadFormBulls");
         const $submitButton = $(".submitLeadForm");
 
@@ -2195,77 +2193,48 @@
           formObject.source = "MAAC Jayanagar Landing Page"
           formObject.timestamp = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
 
-          // First submit to Google Sheets
+          // Send data directly to n8n webhook
           $.ajax({
-            url: scriptURL,
+            url: "https://n8n.aryanshinde.in/webhook/maac-landing-page",
             type: "POST",
-            data: formObject,
-            success: function (response) {
-              // After successful Google Sheets submission, send to webhook
-              $.ajax({
-                url: "https://n8n.aryanshinde.in/webhook/maac-landing-page",
-                type: "POST",
-                contentType: "application/json",
-                data: JSON.stringify({
-                  name: formObject.fullname,
-                  phone: formObject.phone,
-                  location: formObject.location,
-                  course: formObject.course,
-                  source: formObject.source,
-                  timestamp: formObject.timestamp
-                }),
-                success: function (webhookResponse) {
-                  // Clear all input fields without reloading
-                  $form.find("input, textarea, select").val("");
+            contentType: "application/json",
+            data: JSON.stringify({
+              name: formObject.fullname,
+              phone: formObject.phone,
+              location: formObject.location,
+              course: formObject.course,
+              source: formObject.source,
+              timestamp: formObject.timestamp
+            }),
+            success: function (webhookResponse) {
+              // Clear all input fields without reloading
+              $form.find("input, textarea, select").val("");
 
-                  // Show success message
-                  $submitButton
-                    .html(`<span style="color: green;">Message Sent ✓</span>`)
-                    .prop("disabled", true);
+              // Show success message
+              $submitButton
+                .html(`<span style="color: green;">Message Sent ✓</span>`)
+                .prop("disabled", true);
 
-                  // Optional: Reset button after 3 seconds
-                  setTimeout(() => {
-                    $submitButton.prop("disabled", false)
-                      .html(`<span>Send Message</span>
-                      <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                          <g clip-path="url(#clip0_201_978343789)">
-                            <path d="M1.42236 6.99728H13.089M13.089 6.99728L7.48903 1.39728M13.089 6.99728L7.48903 12.5973"
-                              stroke="#030917" stroke-linecap="round" stroke-linejoin="round" />
-                          </g>
-                        </svg>
-                      </span>
-                    `);
-                  }, 3000);
+              // Optional: Reset button after 3 seconds
+              setTimeout(() => {
+                $submitButton.prop("disabled", false)
+                  .html(`<span>Send Message</span>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                      <g clip-path="url(#clip0_201_978343789)">
+                        <path d="M1.42236 6.99728H13.089M13.089 6.99728L7.48903 1.39728M13.089 6.99728L7.48903 12.5973"
+                          stroke="#030917" stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                    </svg>
+                  </span>
+                `);
+              }, 3000);
 
-                  // Redirect to thank you page
-                  window.location.href = "thankyou.html";
-                },
-                error: function (webhookError) {
-                  console.error("Webhook Error!", webhookError);
-                  $submitButton
-                    .html(`<span style="color: red;">Error! Try Again</span>`)
-                    .prop("disabled", false);
-                  alert("Error! Try Again");
-
-                  // Reset button after 3 seconds
-                  setTimeout(() => {
-                    $submitButton.html(`<span>Send Message</span>
-                      <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                          <g clip-path="url(#clip0_201_978343789)">
-                            <path d="M1.42236 6.99728H13.089M13.089 6.99728L7.48903 1.39728M13.089 6.99728L7.48903 12.5973"
-                              stroke="#030917" stroke-linecap="round" stroke-linejoin="round" />
-                          </g>
-                        </svg>
-                      </span>
-                    `);
-                  }, 3000);
-                },
-              });
+              // Redirect to thank you page
+              window.location.href = "thankyou.html";
             },
-            error: function (error) {
-              console.error("Google Sheets Error!", error);
+            error: function (webhookError) {
+              console.error("Webhook Error!", webhookError);
               $submitButton
                 .html(`<span style="color: red;">Error! Try Again</span>`)
                 .prop("disabled", false);
