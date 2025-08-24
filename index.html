@@ -203,11 +203,11 @@
                   <!-- action="https://script.google.com/macros/s/AKfycbyfcThL9vVqMvH_7LD6ag0T0t3Bz-_vnoydSTyb-GNaXMuenb-GSwquN1em0ueivMSX/exec" -->
                   <div class="form-inputs">
                     <div class="type_1">
-                      <label for="fullname" class="form-label">Name</label>
+                      <label for="name" class="form-label">Name</label>
                       <input
                         type="text"
-                        name="fullname"
-                        id="fullname"
+                        name="name"
+                        id="name"
                         class="csame"
                         placeholder="Your name..."
                       />
@@ -331,13 +331,13 @@
               >
               <!-- action="https://script.google.com/macros/s/AKfycbyfcThL9vVqMvH_7LD6ag0T0t3Bz-_vnoydSTyb-GNaXMuenb-GSwquN1em0ueivMSX/exec" -->
               <div class="maac-form-group">
-                <label for="mobile-fullname" class="maac-form-label"
+                <label for="mobile-name" class="maac-form-label"
                   >Name</label
                 >
                 <input
                   type="text"
-                  name="fullname"
-                  id="mobile-fullname"
+                  name="name"
+                  id="mobile-name"
                   class="maac-form-input"
                   placeholder="Your name here..."
                 />
@@ -1894,11 +1894,11 @@
               <!-- action="https://script.google.com/macros/s/AKfycbyfcThL9vVqMvH_7LD6ag0T0t3Bz-_vnoydSTyb-GNaXMuenb-GSwquN1em0ueivMSX/exec" -->
               <div class="form-inputs">
                 <div class="type_1">
-                  <label for="contact-fullname" class="form-label">Name</label>
+                  <label for="contact-name" class="form-label">Name</label>
                   <input
                     type="text"
-                    name="fullname"
-                    id="contact-fullname"
+                    name="name"
+                    id="contact-name"
                     class="csame"
                     placeholder="Your name..."
                   />
@@ -2204,7 +2204,7 @@
             type: "POST",
             contentType: "application/json",
             data: JSON.stringify({
-              name: formObject.fullname,
+              name: formObject.name,
               phone: formObject.phone,
               location: formObject.location,
               course: formObject.course,
