@@ -2893,7 +2893,7 @@ a:hover {
 
 .course-card-image {
   position: relative;
-  height: 260px;
+  height: 340px;
   overflow: hidden;
   background: linear-gradient(45deg, #f0f0f0 0%, #e0e0e0 100%);
 }
@@ -2969,7 +2969,7 @@ a:hover {
 .featured-badge {
   position: absolute;
   top: 15px;
-  right: 15px;
+  left: 15px;
   background: var(--secondary-color);
   color: var(--body-color);
   padding: 6px 12px;
@@ -3161,6 +3161,16 @@ a:hover {
   background: linear-gradient(135deg, rgba(189, 34, 41, 0.3) 0%, rgba(189, 34, 41, 0.2) 50%, rgba(189, 34, 41, 0.25) 100%);
 }
 
+.more-tools-indicator-softwares {
+	font-size: 28px;
+}
+
+@media screen and (max-width: 425px) {
+	.more-tools-indicator-softwares {
+		font-size: 24px;
+	}
+}
+
 .course-meta {
   display: flex;
   justify-content: space-between;
@@ -3309,7 +3319,7 @@ a:hover {
   }
   
   .course-card-image {
-    height: 140px;
+    height: 240px;
   }
   
   .course-features {
