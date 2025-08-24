@@ -3391,19 +3391,14 @@ a:hover {
 
 /* Desktop max-width fix for all main containers */
 @media (min-width: 1200px) {
-  /* Set max-width for all main sections and containers on desktop */
-  section,
   .container,
   .container-md,
   .container-lg,
   .container-xl,
   .container-xxl,
-  .row,
-  .ak-hero-section,
-  .ak-main_header .container-fluid,
-  .no_padding_mob,
-  .why-choose-maac-section .container,
-  .ak-site_header .container {
+  .hero-section .container-md,
+  .container.no_padding_mob,
+  .why-choose-maac-section .container {
     max-width: 1320px !important;
     margin-left: auto;
     margin-right: auto;
