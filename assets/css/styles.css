@@ -3420,3 +3420,9 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 425px) {
+	.container {
+		max-width: 100% !important;
+		width: 100% !important;
+	}
+}
