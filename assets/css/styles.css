@@ -3412,10 +3412,5 @@ a:hover {
   .container-md {
     max-width: 1320px !important;
   }
-
-  .maac-container {
-    max-width: 1320px !important;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
+
