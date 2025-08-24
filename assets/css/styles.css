@@ -2783,65 +2783,79 @@ a:hover {
 	}
 }
 
+/* Thank You Page */
 .thank_you_wrapper {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100svh
+	height: 100svh;
+	background-color: white;
 }
 
 .thank_you.container {
 	text-align: center;
 	max-width: 600px;
 	padding: 40px;
-	background-color: #fff;
+	background-color: white;
 	border-radius: 12px;
-	box-shadow: 0 10px 30px rgb(0 0 0 / .05)
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .thank_you h1 {
-	color: var(--primary-color);
-	font-size: 3rem;
-	margin-bottom: 20px;
-	animation: 1.5s ease-in-out thankYouAnimation
+color: var(--secondary-color);
+font-size: 3rem;
+margin-bottom: 20px;
+animation: thankYouAnimation 1.5s ease-in-out;
 }
 
 .thank_you p {
-	color: #4b5563;
-	font-size: 1.2rem;
-	line-height: 1.6;
-	margin-bottom: 30px
+color: #4b5563;
+font-size: 1.2rem;
+line-height: 1.6;
+margin-bottom: 30px;
 }
 
 .thank_you .btn {
-	display: inline-block;
-	background-color: var(--primary-color);
-	color: #fff;
-	padding: 12px 24px;
-	border-radius: 6px;
-	font-weight: 600;
-	transition: .3s
+display: inline-block;
+background-color: var(--secondary-color);
+color: white;
+padding: 12px 24px;
+border-radius: 6px;
+text-decoration: none;
+font-weight: 600;
+transition: all 0.3s ease;
 }
 
 .thank_you .btn:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 4px 12px rgb(79 70 229 / .2)
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+background-color: var(--primary-color);
 }
 
 @keyframes thankYouAnimation {
 	0% {
 		opacity: 0;
-		transform: translateY(-20px)
+		transform: translateY(-20px);
 	}
 
 	50% {
 		opacity: 1;
-		transform: translateY(10px)
+		transform: translateY(10px);
 	}
 
 	100% {
 		opacity: 1;
-		transform: translateY(0)
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 480px) {
+	.thank_you h1 {
+		font-size: 2.5rem;
+	}
+
+	.thank_you p {
+		font-size: 1rem;
 	}
 }
 
