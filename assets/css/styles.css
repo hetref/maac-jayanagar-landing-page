@@ -825,16 +825,16 @@ a:hover {
 	border-bottom: 1px solid #f9d67c
 }
 
-.ak-footer.style-1 .footer-content .footer-nav .new-letter_email .email-content .email-input-btn .common-btn {
+.ak-footer.style-1 .footer-content .footer-nav .new-letter-email .email-content .email-input-btn .common-btn {
 	position: absolute;
 	right: 0
 }
 
-.ak-footer.style-1 .footer-content .footer-nav .new-letter_email .email-content .email-input-btn .common-btn span {
+.ak-footer.style-1 .footer-content .footer-nav .new-letter-email .email-content .email-input-btn .common-btn span {
 	transform: rotate(-45deg)
 }
 
-.ak-footer.style-1 .footer-content .footer-nav .new-letter_email .email-content .text {
+.ak-footer.style-1 .footer-content .footer-nav .new-letter-email .email-content .text {
 	color: #e7e7e7;
 	line-height: 165%;
 	font-size: 16px;
@@ -3413,4 +3413,3 @@ a:hover {
     max-width: 1320px !important;
   }
 }
-
