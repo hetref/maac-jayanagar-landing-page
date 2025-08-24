@@ -3407,4 +3407,10 @@ a:hover {
   .container-md {
     max-width: 1320px !important;
   }
+
+  .ak-section.ak-style1 {
+    max-width: 1320px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
