@@ -1,33 +1,3 @@
-/* Add at the end of the file for specificity and maintainability */
-
-@media (min-width: 1200px) {
-	/* Hero section */
-	.hero-section,
-	.ak-hero-section,
-	.ak-hero {
-		max-width: 1320px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	/* Unlock Your Creative Future In Animation Technologies section */
-	.unlock-creative-section,
-	.ak-unlock-creative,
-	.ak-animation-technologies {
-		max-width: 1320px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	/* Why Learn From Us? section */
-	.why-learn-section,
-	.ak-why-learn,
-	.why-learn-from-us {
-		max-width: 1320px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
 @import url(https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
 
 ol,
